@@ -267,7 +267,7 @@ def build(md_path, csv_path, out, artifact):
     dau, tuyen, sau = tach_tuyen(vlt) if vlt else ("", [], "")
     for i, (td, body) in enumerate(tuyen, 1):
         stops = khop_tuyen(td, lop)
-        # dòng "**Nên đi:** ..." đưa lên đầu thẻ để thấy ngay lúc no nào nên đi tuyến này
+        # dòng "**Nên đi:** ..." đưa lên đầu thẻ để thấy ngay lúc nào nên đi tuyến này
         nen_di = re.search(r"^\*\*Nên đi:\*\*.*$", body, re.M)
         inner = f'<div class="card"><h2>{html.escape(td)}</h2>'
         if nen_di:
